@@ -7,6 +7,59 @@ This R package contains a pre-trained XGBoost machine learning model for
 predicting cardiovascular disease. It was developed as part of the
 BIO215 Capstone Project.
 
+## Shiny Web Application
+
+As part of the BIO215 Capstone Project, we developed an interactive Shiny web application that serves as both a database explorer and a prediction tool for cardiovascular disease risk assessment. This application is deployed on ShinyApps.io and provides a user-friendly interface for both researchers and healthcare professionals.
+
+### Application Features
+
+#### 1. **Home Page** - Overview and Quick Statistics
+![Home Page](screenshots/shiny_homepage.png)
+The home page provides an overview of the cardiovascular disease dataset, including key statistics such as total patients, disease prevalence, average age, and number of features. Interactive visualizations show the distribution of disease status and age patterns.
+
+#### 2. **Database Module** - Data Exploration and Visualization
+- **Data Browser**: Browse, filter, and search patient records with interactive data tables
+  ![Data Browser](screenshots/shiny_Database_DataBrowser.png)
+- **Visualizations**: Create custom plots including histograms, scatter plots, box plots, and density plots
+  ![Visualizations](screenshots/shiny_Database_Visualizations.png)
+- **Dataset Information**: View detailed variable descriptions and summary statistics
+  ![Dataset Information](screenshots/shiny_Database_DatasetInformation.png)
+
+#### 3. **Prediction Module** - Machine Learning Risk Assessment
+- **Batch Prediction**: Upload CSV files containing multiple patient records for automated risk assessment
+  ![Batch Prediction](screenshots/shiny_Prediction_BatchPrediction.png)
+- **Single Prediction**: Enter individual patient information manually for instant risk evaluation
+  ![Single Prediction](screenshots/shiny_Prediction_SinglePrediction.png)
+
+#### 4. **About Page** - Project Information and Team Details
+![About Page](screenshots/shiny_About.png)
+The about page provides comprehensive information about the BIO215 Capstone Project, including team member roles, project links, and important disclaimers.
+
+### Key Features
+- **Interactive Data Exploration**: Filter, sort, and visualize the cardiovascular disease dataset
+- **Multiple Visualization Options**: Choose from various plot types with customizable parameters
+- **Dual Prediction Modes**: Support for both batch file upload and single patient input
+- **Risk Factor Analysis**: Detailed breakdown of contributing risk factors for individual predictions
+- **Data Export**: Download filtered datasets, visualizations, and prediction results
+- **User-Friendly Interface**: Intuitive navigation with clear instructions and feedback
+
+### Live Deployment
+The Shiny application is deployed on ShinyApps.io and can be accessed at:
+[**https://yimengwang2363850.shinyapps.io/cardio_shiny_app/**]
+
+### Technical Implementation
+- **Framework**: R Shiny with responsive design using `shinythemes`
+- **Data Handling**: Interactive tables with `DT`, data manipulation with `dplyr`
+- **Visualization**: Advanced plotting with `ggplot2`
+- **Machine Learning Integration**: Connects with the trained XGBoost model for predictions
+- **Deployment**: Hosted on ShinyApps.io with automatic scaling and monitoring
+
+### Usage Instructions
+1. **For Data Exploration**: Navigate to the "Database" tab to browse, filter, and visualize the dataset
+2. **For Risk Prediction**: Use the "Prediction" tab to either upload a CSV file or enter patient data manually
+3. **For Results Export**: Download filtered data, plots, or prediction results using the download buttons
+
+
 ## Installation
 
 You can install the development version from GitHub with:
@@ -87,66 +140,5 @@ established medical knowledge.
 <figcaption aria-hidden="true">SHAP Summary</figcaption>
 </figure>
 
-## Shiny Web Application
 
-As part of the BIO215 Capstone Project, we developed an interactive Shiny web application that serves as both a database explorer and a prediction tool for cardiovascular disease risk assessment. This application is deployed on ShinyApps.io and provides a user-friendly interface for both researchers and healthcare professionals.
 
-### Application Features
-
-#### 1. **Home Page** - Overview and Quick Statistics
-![Home Page](screenshots/shiny_homepage.png)
-The home page provides an overview of the cardiovascular disease dataset, including key statistics such as total patients, disease prevalence, average age, and number of features. Interactive visualizations show the distribution of disease status and age patterns.
-
-#### 2. **Database Module** - Data Exploration and Visualization
-- **Data Browser**: Browse, filter, and search patient records with interactive data tables
-  ![Data Browser](screenshots/shiny_Database_DataBrowser.png)
-- **Visualizations**: Create custom plots including histograms, scatter plots, box plots, and density plots
-  ![Visualizations](screenshots/shiny_Database_Visualizations.png)
-- **Dataset Information**: View detailed variable descriptions and summary statistics
-  ![Dataset Information](screenshots/shiny_Database_DatasetInformation.png)
-
-#### 3. **Prediction Module** - Machine Learning Risk Assessment
-- **Batch Prediction**: Upload CSV files containing multiple patient records for automated risk assessment
-  ![Batch Prediction](screenshots/shiny_Prediction_BatchPrediction.png)
-- **Single Prediction**: Enter individual patient information manually for instant risk evaluation
-  ![Single Prediction](screenshots/shiny_Prediction_SinglePrediction.png)
-
-#### 4. **About Page** - Project Information and Team Details
-![About Page](screenshots/shiny_About.png)
-The about page provides comprehensive information about the BIO215 Capstone Project, including team member roles, project links, and important disclaimers.
-
-### Key Features
-- **Interactive Data Exploration**: Filter, sort, and visualize the cardiovascular disease dataset
-- **Multiple Visualization Options**: Choose from various plot types with customizable parameters
-- **Dual Prediction Modes**: Support for both batch file upload and single patient input
-- **Risk Factor Analysis**: Detailed breakdown of contributing risk factors for individual predictions
-- **Data Export**: Download filtered datasets, visualizations, and prediction results
-- **User-Friendly Interface**: Intuitive navigation with clear instructions and feedback
-
-### Live Deployment
-The Shiny application is deployed on ShinyApps.io and can be accessed at:
-[**https://yimengwang2363850.shinyapps.io/cardio_shiny_app/**]
-
-### Technical Implementation
-- **Framework**: R Shiny with responsive design using `shinythemes`
-- **Data Handling**: Interactive tables with `DT`, data manipulation with `dplyr`
-- **Visualization**: Advanced plotting with `ggplot2`
-- **Machine Learning Integration**: Connects with the trained XGBoost model for predictions
-- **Deployment**: Hosted on ShinyApps.io with automatic scaling and monitoring
-
-### Usage Instructions
-1. **For Data Exploration**: Navigate to the "Database" tab to browse, filter, and visualize the dataset
-2. **For Risk Prediction**: Use the "Prediction" tab to either upload a CSV file or enter patient data manually
-3. **For Results Export**: Download filtered data, plots, or prediction results using the download buttons
-
-### Note for Researchers
-This application is designed for educational and research purposes as part of the BIO215 Capstone Project. It should not be used for clinical diagnosis or medical decision-making. Always consult qualified healthcare professionals for medical advice.
-
----
-
-**Project Team**:
-- **Machine Learning Modeler**: Lingyu Jiang
-- **Shiny Website Developer**: Yimeng Wang  
-- **R Package Developer**: Zihao Wang
-
-**BIO215 Capstone Project | Department of Bioinformatics**
