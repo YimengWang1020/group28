@@ -1,0 +1,21 @@
+Package: group28
+Title: Prediction Model for Cardiovascular Disease using XGBoost
+Version: 0.1.0
+Authors@R: 
+    person(given = "Zihao", family = "Wang", 
+           email = "Zihao.Wang2302@student.xjtlu.edu.cn", 
+           role = c("aut", "cre"),
+           comment = "Role 3: R package developer")
+Description: This package provides a pre-trained XGBoost machine learning model 
+    to predict the presence of cardiovascular disease based on patient biological 
+    features. It includes a complete prediction workflow that handles data 
+    preprocessing and classification. Developed for the BIO215 Capstone Project.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.3
+Imports: 
+    parsnip,
+    workflows,
+    xgboost,
+    stats
